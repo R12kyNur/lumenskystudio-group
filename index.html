@@ -127,9 +127,6 @@
                 <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-semibold text-base shadow-lg shadow-purple-500/20 hover:scale-105 transition-all duration-300">
                     Eksplor Portofolio <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
-                <a href="#calculator" class="w-full sm:w-auto px-8 py-4 bg-brand-card hover:bg-brand-card/80 text-white rounded-xl font-semibold text-base border border-brand-purple/30 hover:border-brand-purple transition-all duration-300">
-                    Hitung Estimasi Harga
-                </a>
             </div>
         </div>
 
@@ -389,38 +386,38 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-semibold">Nama Lengkap</label>
-                            <input type="text" required class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
+                            <input id="customer-name" type="text" required class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-semibold">Nomor WhatsApp</label>
-                            <input type="tel" required class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
+                            <input id="customer-phone" type="tel" required class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-semibold">Surel Kontak</label>
-                            <input type="email" required class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
+                            <input id="customer-email" type="email" required class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-semibold">Pilih Paket Layanan</label>
                             <select id="selected-service" class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
                                 <option value="Kustom / Konsultasi">Sesi Kustom / Konsultasi</option>
-                                <option value="Silver Legacy">Silver Legacy Paket (Rp 1.5jt)</option>
-                                <option value="Gold Cinematic">Gold Cinematic Paket (Rp 5jt)</option>
-                                <option value="Platinum Royal">Platinum Royal Paket (Rp 10jt)</option>
+                                <option value="Hemat Baseline">Hemat Baseline Paket (Rp 75K)</option>
+                                <option value="Silver Legacy">Silver Legacy Paket (Rp 200K)</option>
+                                <option value="Platinum Royal">Platinum Royal Paket (Rp 500K)</option>
                             </select>
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-semibold">Rencana Tanggal Proyek / Acara</label>
-                        <input type="date" class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
+                        <input id="project-date" type="date" class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors">
                     </div>
 
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-semibold">Deskripsi Singkat Rencana Konsep Anda</label>
-                        <textarea rows="4" placeholder="Ceritakan ide pemotretan impian Anda di sini..." class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors"></textarea>
+                        <textarea id="project-description" rows="4" placeholder="Ceritakan ide pemotretan impian Anda di sini..." class="w-full bg-brand-dark/50 border border-brand-purple/20 focus:border-brand-purple rounded-xl p-3.5 text-white outline-none transition-colors"></textarea>
                     </div>
 
                     <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-bold hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
@@ -571,10 +568,25 @@
             document.getElementById('contact').scrollIntoView();
         }
 
-        // Submitting Form Mock Alert
+        // Send the form details through email and WhatsApp
         function submitForm(event) {
             event.preventDefault();
-            alert('Terima kasih! Tim representasi premium Lumensky akan menghubungi Anda dalam waktu kurang dari 24 jam via WhatsApp.');
+            const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const email = document.getElementById('customer-email').value;
+            const service = document.getElementById('selected-service').value;
+            const date = document.getElementById('project-date').value || '-';
+            const description = document.getElementById('project-description').value || '-';
+            const message = `Halo Lumensky Studio, saya ingin memesan layanan.\n\nNama: ${name}\nNomor WhatsApp: ${phone}\nEmail: ${email}\nPaket: ${service}\nTanggal proyek/acara: ${date}\nDeskripsi: ${description}`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/6289561848881?text=${encodedMessage}`;
+            const emailUrl = `mailto:lumenskystudiogroup@gmail.com?subject=${encodeURIComponent('Pemesanan Layanan Lumensky Studio')}&body=${encodedMessage}`;
+
+            // Buka WhatsApp lebih dulu agar browser tidak memblokir tab baru setelah email.
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+            window.location.href = emailUrl;
+            alert('Form siap dikirim melalui email dan WhatsApp. Silakan tekan tombol Kirim pada aplikasi yang terbuka.');
             document.getElementById('lead-form').reset();
         }
 
