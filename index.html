@@ -127,6 +127,9 @@
                 <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-semibold text-base shadow-lg shadow-purple-500/20 hover:scale-105 transition-all duration-300">
                     Eksplor Portofolio <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
+                <a href="#calculator" class="w-full sm:w-auto px-8 py-4 bg-brand-card hover:bg-brand-card/80 text-white rounded-xl font-semibold text-base border border-brand-purple/30 hover:border-brand-purple transition-all duration-300">
+                    Hitung Estimasi Harga
+                </a>
             </div>
         </div>
 
@@ -568,7 +571,7 @@
             document.getElementById('contact').scrollIntoView();
         }
 
-        // Send the form details through email and WhatsApp
+        // Send the form details through email
         function submitForm(event) {
             event.preventDefault();
             const name = document.getElementById('customer-name').value;
@@ -579,14 +582,7 @@
             const description = document.getElementById('project-description').value || '-';
             const message = `Halo Lumensky Studio, saya ingin memesan layanan.\n\nNama: ${name}\nNomor WhatsApp: ${phone}\nEmail: ${email}\nPaket: ${service}\nTanggal proyek/acara: ${date}\nDeskripsi: ${description}`;
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/6289561848881?text=${encodedMessage}`;
-            const emailUrl = `mailto:lumenskystudiogroup@gmail.com?subject=${encodeURIComponent('Pemesanan Layanan Lumensky Studio')}&body=${encodedMessage}`;
-
-            // Buka WhatsApp lebih dulu agar browser tidak memblokir tab baru setelah email.
-            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-            window.location.href = emailUrl;
-            alert('Form siap dikirim melalui email dan WhatsApp. Silakan tekan tombol Kirim pada aplikasi yang terbuka.');
+            window.location.href = `mailto:lumenskystudiogroup@gmail.com?subject=${encodeURIComponent('Pemesanan Layanan Lumensky Studio')}&body=${encodeURIComponent(message)}`;
             document.getElementById('lead-form').reset();
         }
 
