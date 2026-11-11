@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumensky | Premium Photography & Videography Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="Image/Lumensky_studio.png" alt="Lumensky Studio">
+            </a>
+            <nav class="desktop-nav">
+                <a href="#tentang-kami">Tentang Kami</a>
+                <a href="#portofolio">Portofolio</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#kalkulator">Kalkulator Harga</a>
+            </nav>
+            <a href="#kontak" class="btn btn-primary cta-nav">Hubungi Studio</a>
+            <button id="mobile-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        <a href="#tentang-kami" class="mobile-link">Tentang Kami</a>
+        <a href="#portofolio" class="mobile-link">Portofolio</a>
+        <a href="#layanan" class="mobile-link">Layanan</a>
+        <a href="#kalkulator" class="mobile-link">Kalkulator Harga</a>
+        <a href="#kontak" class="mobile-link">Hubungi Studio</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero scroll-anim">
+        <div class="hero-content">
+            <h1 class="hero-title">Menangkap Cahaya, Mengabadikan <span class="text-gradient">Kisah Abadi</span></h1>
+            <p class="hero-desc">Menyulap visi kreatif, merek premium, dan momen berharga Anda menjadi mahakarya visual sinematik dengan pengalaman profesional lebih dari 20 tahun.</p>
+            <div class="hero-buttons">
+                <a href="#portofolio" class="btn btn-primary">Eksplor Portofolio <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#kontak" class="btn btn-outline">Hubungi Studio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTIK SECTION -->
+    <section id="tentang-kami" class="stats scroll-anim">
+        <div class="stat-item">
+            <i class="fa-solid fa-camera-retro stat-icon"></i>
+            <h3 class="stat-number">6+</h3>
+            <p class="stat-label">Tahun Pengalaman</p>
+        </div>
+        <div class="stat-item">
+            <i class="fa-solid fa-check-double stat-icon"></i>
+            <h3 class="stat-number">800+</h3>
+            <p class="stat-label">Proyek Selesai</p>
+        </div>
+        <div class="stat-item">
+            <i class="fa-solid fa-face-smile stat-icon"></i>
+            <h3 class="stat-number">100%</h3>
+            <p class="stat-label">Kepuasan Klien</p>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portofolio" class="portfolio scroll-anim">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+                <span class="subtitle">Galeri Pilihan</span>
+                <h2 class="section-title">Mahakarya Lumensky</h2>
+            </div>
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="Semua">Semua</button>
+                <button class="filter-btn" data-filter="Fotografi">Fotografi</button>
+                <button class="filter-btn" data-filter="Videografi">Videografi</button>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- Item 1 -->
+            <div class="portfolio-card" data-category="Fotografi">
+                <div class="portfolio-info-top">
+                    <span class="portfolio-label">Modest Edgy Streetwear</span>
+                    <h3 class="portfolio-name">Streetwear Hijab</h3>
+                </div>
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczONxOJtmp1V4DhMkOrScXRIBfr7QypRVJ5fgThXG4FPjXbmxvfYFOzMnFiNolwLmsDnwM_M_1kYd86xSJTjZBjhZsol5Hkct-t_zo0BxeD-onoznw=w2400" alt="Streetwear Hijab" loading="lazy">
+                <p class="portfolio-desc">Gaya ini sangat kental dengan nuansa streetwear atau mode fesyen jalanan urban.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="portfolio-card" data-category="Fotografi">
+                <div class="portfolio-info-top">
+                    <span class="portfolio-label">street culture</span>
+                    <h3 class="portfolio-name">Y2K Casual Streetwear & Utility Streetwear</h3>
+                </div>
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPHXlSOwcCHDPs6WQF-spCOxxK6hYKqiMsPmnClnqgnoYdPGwm19oGb2IrmXnRBya6rkWmrUYcstez3Qwqkib3kAgPeOqnTBmtwBBLhWq_7EzVzKw=w2400" alt="Y2K Casual Streetwear" loading="lazy">
+                <p class="portfolio-desc">mengutamakan kenyamanan, dan terlihat effortless.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="portfolio-card" data-category="Fotografi">
+                <div class="portfolio-info-top">
+                    <span class="portfolio-label">Urban Lifestyle Portrait</span>
+                    <h3 class="portfolio-name">Muted & Moody Aesthetics</h3>
+                </div>
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNubzWoVnX00xlWbHL4Ly9m2vEpKKtYRoHdpBWb1QzgG2V4XrVJG3wCgr2WwGXqgZvHWKwT9HRcFLT8ogU45hVbQmtQypJeMBKl1yc9vz4hSS_vKQ=w2400" alt="Muted & Moody Aesthetics" loading="lazy">
+                <p class="portfolio-desc">Pencahayaan alami yang lembut saat senja memberikan warna-warna yang diredam.</p>
+            </div>
+
+            <!-- Slot Kosong 4 -->
+            <!-- <div class="portfolio-card empty-slot"><div class="placeholder">Slot 4 Kosong</div></div> -->
+            <!-- Slot Kosong 5 -->
+            <!-- <div class="portfolio-card empty-slot"><div class="placeholder">Slot 5 Kosong</div></div> -->
+            <!-- Slot Kosong 6 -->
+            <!-- <div class="portfolio-card empty-slot"><div class="placeholder">Slot 6 Kosong</div></div> -->
+        </div>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section id="layanan" class="packages scroll-anim">
+        <div class="section-header center">
+            <span class="subtitle">Investasi Terbaik</span>
+            <h2 class="section-title">Investasi Paket Visual</h2>
+        </div>
+
+        <div class="package-grid">
+            <!-- Paket 1 -->
+            <div class="package-card">
+                <h3 class="pkg-title">Hemat Baseline</h3>
+                <div class="pkg-price">Rp 75K <span>/ Proyek</span></div>
+                <ul class="pkg-features">
+                    <li><i class="fa-solid fa-check"></i> 1 Spot Foto</li>
+                    <li><i class="fa-solid fa-check"></i> Semua File Mentah</li>
+                    <li><i class="fa-solid fa-check"></i> 1 Fotografer</li>
+                    <li><i class="fa-solid fa-check"></i> 2 Foto edit</li>
+                </ul>
+                <a href="#kontak" class="btn btn-outline pkg-btn" data-paket="Hemat Baseline">Pilih Paket</a>
+            </div>
+
+            <!-- Paket 2 (Best Seller) -->
+            <div class="package-card featured">
+                <div class="badge">Paling Populer</div>
+                <h3 class="pkg-title">Silver Legacy</h3>
+                <div class="pkg-price text-gradient">Rp 200K <span>/ Proyek</span></div>
+                <ul class="pkg-features">
+                    <li><i class="fa-solid fa-check text-purple"></i> 1 Fotografer</li>
+                    <li><i class="fa-solid fa-check text-purple"></i> 10 Foto Hasil Edit</li>
+                    <li><i class="fa-solid fa-check text-purple"></i> 2x Ganti Dresscode</li>
+                    <li><i class="fa-solid fa-check text-purple"></i> Semua File Mentah</li>
+                </ul>
+                <a href="#kontak" class="btn btn-primary pkg-btn" data-paket="Silver Legacy">Pilih Paket</a>
+            </div>
+
+            <!-- Paket 3 -->
+            <div class="package-card">
+                <h3 class="pkg-title">Platinum Royal</h3>
+                <div class="pkg-price">Rp 400K <span>/ Proyek</span></div>
+                <ul class="pkg-features">
+                    <li><i class="fa-solid fa-check"></i> Fotografer komposisi dan directing</li>
+                    <li><i class="fa-solid fa-check"></i> 25 Foto Hasil Edit</li>
+                    <li><i class="fa-solid fa-check"></i> 3x Ganti Dresscode</li>
+                    <li><i class="fa-solid fa-check"></i> Semua File Mentah</li>
+                </ul>
+                <a href="#kontak" class="btn btn-outline pkg-btn" data-paket="Platinum Royal">Pilih Paket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KALKULATOR HARGA (Kerangka UI untuk JS yang sudah ada) -->
+    <section id="kalkulator" class="calculator scroll-anim">
+        <div class="section-header center">
+            <h2 class="section-title">Kalkulator Harga Kustom</h2>
+            <p class="text-muted">Simulasikan kebutuhan spesifik Anda</p>
+        </div>
+        <div class="calc-container">
+            <div class="calc-grid">
+                <!-- TODO: Sesuaikan opsi value ini jika logika harga per jam/tipe proyek Anda berbeda -->
+                <select id="calc-type" class="form-input" onchange="calculatePrice()">
+                    <option value="1500000">Personal Shoot (Base: Rp 1.5jt)</option>
+                    <option value="3000000">Wedding (Base: Rp 3jt)</option>
+                </select>
+                <input type="number" id="calc-duration" class="form-input" placeholder="Durasi (Jam)" value="8" oninput="calculatePrice()">
+                <div class="crew-counter">
+                    <span>Jumlah Kru: <strong id="crew-val">2</strong></span>
+                    <div>
+                        <button type="button" class="btn-crew" onclick="changeCrew(-1)">-</button>
+                        <button type="button" class="btn-crew" onclick="changeCrew(1)">+</button>
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="add-drone" onchange="calculatePrice()"> Tambah Drone</label>
+                    <label><input type="checkbox" id="add-express" onchange="calculatePrice()"> Edit Cepat</label>
+                </div>
+            </div>
+            <div class="calc-result">
+                <p>Estimasi Biaya (<span id="duration-val">8 Jam</span>):</p>
+                <h3 id="total-price-display" class="text-gradient">Rp 0</h3>
+                <button onclick="lockQuoteAndRedirect()" class="btn btn-outline w-full mt-4">Kunci Harga & Pesan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (3 KOLOM: Info, Kontak, Form) -->
+    <footer id="kontak" class="footer scroll-anim">
+        <div class="footer-grid">
+            <!-- Kolom 1: Brand Info -->
+            <div class="footer-col brand-col">
+                <img src="Image/Lumensky_studio.png" alt="Lumensky Studio" class="footer-logo">
+                <h3 class="footer-brand">Lumensky Studio Group</h3>
+                <p class="footer-desc">Wujudkan Visi Hebat Anda. Kami hanya menerima proyek terbatas setiap bulannya untuk menjaga kualitas seni tertinggi.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Kontak -->
+            <div class="footer-col contact-col">
+                <h4 class="footer-title">Kontak Kami</h4>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-phone"></i> +62 895-6184-48881</li>
+                    <li><i class="fa-solid fa-envelope"></i> lumenskystudiogroup@gmail.com</li>
+                    <li><i class="fa-brands fa-instagram"></i> @Lumensky.Studio</li>
+                    <li><i class="fa-brands fa-tiktok"></i> @Lumensky.Studio</li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Form Pemesanan -->
+            <div class="footer-col form-col">
+                <h4 class="footer-title">Kirim Pesan / Booking</h4>
+                <form id="lead-form" class="booking-form">
+                    <input type="text" id="customer-name" placeholder="Nama Lengkap" required class="form-input">
+                    <input type="tel" id="customer-phone" placeholder="Nomor WhatsApp" required class="form-input">
+                    <input type="email" id="customer-email" placeholder="Surel Kontak" required class="form-input">
+                    <select id="selected-service" class="form-input">
+                        <option value="Kustom / Konsultasi">Sesi Kustom / Konsultasi</option>
+                        <option value="Hemat Baseline">Hemat Baseline</option>
+                        <option value="Silver Legacy">Silver Legacy</option>
+                        <option value="Platinum Royal">Platinum Royal</option>
+                    </select>
+                    <input type="date" id="project-date" class="form-input">
+                    <textarea id="project-description" rows="3" placeholder="Deskripsi Singkat Rencana Konsep Anda..." class="form-input"></textarea>
+                    <button type="submit" class="btn btn-primary w-full">Kirim Form Pemesanan <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lumensky Studio. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
