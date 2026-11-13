@@ -145,9 +145,8 @@ if (leadForm) {
             Deskripsi: ${description}`;
 
         // Ganti dengan nomor WhatsApp tujuan (format 62, tanpa + dan tanpa 0 di depan)
-        // const waNumber = '62895618448881';
-        const waNumber = '6285179761361';
-
+        const waNumber = '62895618448881';
+        
         const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
 
