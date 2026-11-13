@@ -126,16 +126,31 @@ const leadForm = document.getElementById('lead-form');
 if (leadForm) {
     leadForm.addEventListener('submit', function(event) {
         event.preventDefault();
+
         const name = document.getElementById('customer-name').value;
         const phone = document.getElementById('customer-phone').value;
         const email = document.getElementById('customer-email').value;
         const service = document.getElementById('selected-service').value;
         const date = document.getElementById('project-date').value || '-';
         const description = document.getElementById('project-description').value || '-';
-        
-        const message = `Halo Lumensky Studio, saya ingin memesan layanan.\n\nNama: ${name}\nNomor WhatsApp: ${phone}\nEmail: ${email}\nPaket: ${service}\nTanggal proyek/acara: ${date}\nDeskripsi: ${description}`;
 
-        window.location.href = `mailto:lumenskystudiogroup@gmail.com?subject=${encodeURIComponent('Pemesanan Layanan Lumensky Studio')}&body=${encodeURIComponent(message)}`;
+        const message =
+            `Halo Lumensky Studio, saya ingin memesan layanan.
+
+            Nama: ${name}
+            Nomor WhatsApp: ${phone}
+            Email: ${email}
+            Paket: ${service}
+            Tanggal proyek/acara: ${date}
+            Deskripsi: ${description}`;
+
+        // Ganti dengan nomor WhatsApp tujuan (format 62, tanpa + dan tanpa 0 di depan)
+        // const waNumber = '62895618448881';
+        const waNumber = '6285179761361';
+
+        const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+
         leadForm.reset();
     });
 }
